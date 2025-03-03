@@ -1,8 +1,7 @@
-# React + Vite
+# Delicias De Mami Anita
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+My name is Kevin Fajardo, and I created this website to support my grandma's small dining business because I truly believe her cooking is among the best in Connecticut. She not only prepares some of the most traditional Ecuadorian dishes, but she also serves them with the warmth and care of family—pouring love and dedication into everything she makes.
 
-Currently, two official plugins are available:
+The website features various menu categories, including Main Dishes, Appetizers, Drinks, Kid’s Menu, and Desserts. Clicking on any category will navigate you to its respective section. Selecting "View More" will display the price along with a brief description of the dish. 
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+# Table Of Contents
