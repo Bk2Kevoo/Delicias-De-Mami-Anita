@@ -1,0 +1,85 @@
+{
+    "maindishes": [
+        {
+            "id": "1",
+            "name": "Encebollado",
+            "image": "/images/encebollado.jpg",
+            "price": 15.00,
+            "description": "A traditional Ecuadorian fish soup made with albacore tuna, yuca, and onions, typically served with avocado and lime."
+        },
+        {
+            "id": "2",
+            "name": "Ceviche De Camaron",
+            "image": "/images/ceviche2.jpg",
+            "price": 15.00,
+            "description": "A refreshing shrimp ceviche marinated in lime juice with tomatoes, onions, and cilantro, served with popcorn and plantain chips."
+        }
+    ],
+    "sidedishes": [
+        {
+            "id": "10",
+            "name": "Salchipapa",
+            "image": "/images/salchipapa.jpg",
+            "description": "A popular street food dish made of French fries topped with sliced hot dogs and served with various condiments like ketchup and mayonnaise.",
+            "price": 5.00
+        }
+    ],
+    "drinks": [
+        {
+            "id": "20",
+            "name": "Inca Kola",
+            "image": "/images/inca.jpg",
+            "price": 1.00,
+            "description": "A sweet, bright yellow soda that is a popular choice in Ecuador, often enjoyed with meals."
+        },
+        {
+            "id": "21",
+            "name": "Coke",
+            "image": "/images/coke.jpg",
+            "price": 1.00,
+            "description": "Classic Coca-Cola, a favorite carbonated beverage worldwide."
+        },
+        {
+            "id": "22",
+            "name": "Gatorade",
+            "image": "/images/green.jpg",
+            "description": "A sports drink available in various flavors, perfect for refreshing after physical activity.",
+            "price": 2.00
+        },
+        {
+            "id": "23",
+            "name": "Pepsi",
+            "image": "/images/pepsi.jpg",
+            "price": 1.00,
+            "description": "Another popular carbonated soft drink, known for its bold flavor."
+        },
+        {
+            "id": "24",
+            "name": "Guitig (Sparkling Water)",
+            "image": "/images/guitig.jpg",
+            "price": 2.00,
+            "description": "A refreshing sparkling water that is perfect for pairing with meals."
+        },
+        {
+            "id": "25",
+            "name": "Heineken",
+            "image": "/images/Heineken.jpg",
+            "price": 3.00,
+            "description": "A well-known international lager, enjoyed for its crisp and refreshing taste."
+        },
+        {
+            "id": "26",
+            "name": "Corona",
+            "image": "/images/corona.jpg",
+            "price": 3.00,
+            "description": "A light Mexican beer that is often served with a lime wedge."
+        },
+        {
+            "id": "27",
+            "name": "Modelo",
+            "image": "/images/modelo.jpg",
+            "price": 3.00,
+            "description": "A rich and full-bodied Mexican beer that pairs well with a variety of dishes."
+        }
+    ]
+}

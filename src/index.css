@@ -1,0 +1,408 @@
+/* Root Variables */
+:root {
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+  color-scheme: light dark;
+  color: rgba(255, 255, 255, 0.87);
+  background-color: #ffffffab;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Global Styles */
+body {
+  margin: 0;
+  color: white;
+  display: flex;
+  flex-direction: column; /* Ensure vertical stacking */
+  place-items: center;
+  min-width: 320px;
+  min-height: 100vh;
+  padding-top: 120px; /* Increased padding to accommodate larger header */
+}
+
+/* Link Styles */
+a {
+  font-weight: 500;
+  color: #646cff;
+  text-decoration: inherit;
+}
+
+a:hover {
+  color: #535bf2;
+}
+
+/* Button Styles */
+button {
+  border-radius: 8px;
+  border: 1px solid transparent;
+  padding: 0.6em 1.2em;
+  font-size: 1em;
+  font-weight: 500;
+  font-family: inherit;
+  background-color: #1a1a1a;
+  cursor: pointer;
+  transition: border-color 0.25s;
+}
+
+button:hover {
+  border-color: #646cff;
+}
+
+button:focus,
+button:focus-visible {
+  outline: 4px auto -webkit-focus-ring-color;
+}
+
+/* Light Mode Adjustments */
+@media (prefers-color-scheme: light) {
+  :root {
+    color: #213547;
+    background-color: #ffffff;
+  }
+
+  a:hover {
+    color: #747bff;
+  }
+
+  button {
+    background-color: #f9f9f9;
+  }
+}
+
+/* Header Styles */
+header {
+  position: fixed; /* Keep the header fixed at the top */
+  top: 0;
+  left: 0;
+  right: 0;
+  background-color: #272727; /* Match your background color */
+  z-index: 1000; /* Ensure it stays on top of other elements */
+  display: flex; /* Use flexbox for alignment */
+  justify-content: space-between; /* Space between the logo/text and nav */
+  align-items: center; /* Center vertically */
+  padding: 15px 90px; /* Reduce padding for a smaller header */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.logo {
+  width: 160px; 
+  height: auto; 
+}
+
+h1 {
+  color: black;
+  font-size: 3em;
+  line-height: 2;
+}
+
+/* Navigation Styles */
+nav {
+  display: flex; 
+  gap: 20px; 
+}
+
+.home-link,
+.movies-link {
+  text-decoration: none;
+  color: inherit; 
+  padding: 5px 10px; 
+}
+
+.active {
+  font-weight: bold; 
+}
+
+/* Main Dish Styles */
+.maindish {
+  display: flex;
+  flex-wrap: wrap;
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.main-dish-card {
+  flex: 1 1 300px; /* Responsive flex item */
+  margin: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 20px;
+  color: black;
+  text-align: center;
+  transition: transform 0.2s;
+}
+
+.main-dish-card:hover {
+  transform: scale(1.05);
+}
+
+.maindish-image {
+  width: 100%;
+  height: auto;
+  max-height: 200px;
+  object-fit: cover;
+  border-radius: 5px;
+}
+
+/* Responsive Design for Small Screens */
+@media (max-width: 600px) {
+  .main-dish-card {
+    flex: 1 1 100%;
+    margin: 10px;
+  }
+
+  .maindish-card {
+    width: 90%;
+    padding: 10px;
+  }
+
+  .maindish-card img {
+    max-height: 200px;
+  }
+}
+
+.maindish-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  max-width: 600px;
+  margin: auto;
+  color: black;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.maindish-card img {
+  width: 100%;
+  height: auto;
+  max-height: 300px;
+  object-fit: cover;
+  border-radius: 5px;
+}
+
+.price {
+  font-weight: bold;
+  margin-top: 10px;
+}
+
+.content-box {
+  background-color: white;
+  text-align: center;
+  padding: 20px;
+}
+
+/* Menu Grid Styles */
+.menu-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); 
+  gap: 10px; 
+  margin: 10% 12%;
+  padding-left: 20px;
+  padding-right: 20px;
+  justify-items: center;
+}
+
+.menu-item {
+  text-decoration: none;
+  color: black;
+  text-align: center;
+  transition: transform 0.2s;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  border-radius: 10px;
+  background-color: #99c1f5;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 350px; /* Adjust to limit the width of each item */
+  height: 450px;
+  margin-bottom: 20px; /* Ensure there's space below each item */
+}
+
+.menu-item p {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: transparent;
+  border: 2px solid #333;
+  border-radius: 5px;
+  font-size: 1.2em;
+  color: #333;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.menu-item p:hover {
+  background-color: #007bff;
+  color: white;
+}
+
+.menu-item:hover {
+  transform: scale(1.05);
+}
+
+.menu-item img {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+  border-radius: 30px;
+  margin-bottom: 40px;
+}
+
+.menu-item h3 {
+  margin-top: 10px;
+  font-size: 1.4em;
+  font-weight: 600;
+  color: #333;
+}
+
+/* Images Under the Header */
+.house-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0;
+  width: 100vw;
+  min-width: 100%;
+  height: 60vh;
+  position: relative;
+}
+
+.house-left,
+.house-right {
+  width: 50vw;
+  height: 100%;
+}
+
+.house-left img,
+.house-right img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(238, 247, 113, 0.603);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-size: 4rem;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-weight: bold;
+  text-align: center;
+}
+
+hr {
+  border: 2px solid #0000005b;
+  margin: 10px auto;
+  width: 50%; /* Adjust width to make it shorter */
+}
+
+/* Responsive Menu Grid */
+@media (max-width: 600px) {
+  .menu-grid {
+    grid-template-columns: 1fr; 
+    margin: 5% 5%;
+    padding-left: 10px;
+    padding-right: 10px; 
+  }
+
+  .menu-item {
+    width: 90%; /* Take up most of the screen width */
+    max-width: 100%; /* Allow item to fill the screen width */
+    padding: 20px; /* Reduce padding on mobile */
+    margin-bottom: 20px; /* Add space between items */
+  }
+
+  .menu-item img {
+    height: 200px; /* Reduce image height */
+  }
+}
+
+.bottom-info {
+  width: 100vw; 
+  max-width: 100%; 
+  background-color: red;
+  margin: 0; 
+  padding: 80px 20px; 
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.bottom-info h1 {
+  color: white;
+  font-size: 4em; /* Reduce font size for better readability on mobile */
+}
+
+.bottom-info h2, 
+.bottom-info h3 {
+  font-size: 3em; /* Adjust heading size */
+}
+
+/* Map adjustments */
+.bottom-info iframe, 
+.bottom-info div { 
+  width: 100%; 
+  max-width: 1300px; 
+  height: 100px;
+  
+}
+
+/* Adjustments specifically for small screens */
+@media (max-width: 768px) {
+  .bottom-info {
+    padding: 30px; /* Reduce padding on smaller screens */
+  }
+
+  .bottom-info h1 {
+    font-size: 1.8em; /* Reduce size for smaller screens */
+  }
+
+  .bottom-info h2, 
+  .bottom-info h3 {
+    font-size: 1em; /* Keep them readable but smaller */
+  }
+
+  .bottom-info iframe, 
+  .bottom-info div { 
+    width: 95%; /* Make full use of mobile screen width */
+    max-width: 100%; 
+    height: 200px; /* Adjust height to fit better */
+  }
+}
+
+/* For very small screens */
+@media (max-width: 480px) {
+  .bottom-info {
+    padding: 20px; /* Reduce padding even more */
+  }
+
+  .bottom-info h1 {
+    font-size: 1.5em;
+  }
+
+  .bottom-info h2, 
+  .bottom-info h3 {
+    font-size: 1em;
+  }
+
+  .bottom-info iframe, 
+  .bottom-info div { 
+    height: 200px; /* Make the map smaller on tiny screens */
+  }
+}
