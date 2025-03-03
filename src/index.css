@@ -15,13 +15,13 @@
 /* Global Styles */
 body {
   margin: 0;
-  color: white;
+  background-color: white;
   display: flex;
-  flex-direction: column; /* Ensure vertical stacking */
+  flex-direction: column;
   place-items: center;
   min-width: 320px;
   min-height: 100vh;
-  padding-top: 120px; /* Increased padding to accommodate larger header */
+  padding-top: 120px;
 }
 
 /* Link Styles */
@@ -75,22 +75,22 @@ button:focus-visible {
 
 /* Header Styles */
 header {
-  position: fixed; /* Keep the header fixed at the top */
+  position: fixed;
   top: 0;
   left: 0;
   right: 0;
-  background-color: #272727; /* Match your background color */
-  z-index: 1000; /* Ensure it stays on top of other elements */
-  display: flex; /* Use flexbox for alignment */
-  justify-content: space-between; /* Space between the logo/text and nav */
-  align-items: center; /* Center vertically */
-  padding: 15px 90px; /* Reduce padding for a smaller header */
+  background-color: #272727;
+  z-index: 1000;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 90px;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
 }
 
 .logo {
-  width: 160px; 
-  height: auto; 
+  width: 160px;
+  height: auto;
 }
 
 h1 {
@@ -101,108 +101,215 @@ h1 {
 
 /* Navigation Styles */
 nav {
-  display: flex; 
-  gap: 20px; 
+  display: flex;
+  gap: 20px;
 }
 
 .home-link,
 .movies-link {
   text-decoration: none;
-  color: inherit; 
-  padding: 5px 10px; 
+  color: inherit;
+  padding: 5px 10px;
 }
 
 .active {
-  font-weight: bold; 
+  font-weight: bold;
+}
+
+.maindish-grid {
+  background-color: white;
+  /* box-sizing: border-box; */
 }
 
 /* Main Dish Styles */
 .maindish {
-  display: flex;
-  flex-wrap: wrap;
-  list-style-type: none;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px; /* Ensure some gap between the cards */
   padding: 0;
   margin: 0;
+  justify-items: center; /* Center the cards horizontally */
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
+/* Main Dish Card */
 .main-dish-card {
-  flex: 1 1 300px; /* Responsive flex item */
+  display: flex; /* Flexbox for content alignment */
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
   margin: 20px;
   border: 1px solid #ccc;
-  border-radius: 5px;
-  padding: 20px;
+  border-radius: 10px;
+  padding: 30px;
   color: black;
   text-align: center;
   transition: transform 0.2s;
+  background-color: #99c1f5;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  width: 100%; /* Set to 100% of its parent container */
+  max-width: 350px; /* Maximum width for each card */
+  height: auto; /* Allow the card to adjust its height based on content */
+  box-sizing: border-box; /* Include padding in width/height calculations */
 }
 
 .main-dish-card:hover {
   transform: scale(1.05);
+  background-color: #535bf2;
 }
 
+/* Main Dish Card Image */
 .maindish-image {
   width: 100%;
-  height: auto;
-  max-height: 200px;
+  height: 200px;
   object-fit: cover;
   border-radius: 5px;
 }
 
 /* Responsive Design for Small Screens */
-@media (max-width: 600px) {
+@media (max-width: 768px) {
+  .maindish {
+    grid-template-columns: 1fr 1fr; /* 2 items per row on medium screens */
+  }
+
   .main-dish-card {
     flex: 1 1 100%;
     margin: 10px;
   }
+}
 
-  .maindish-card {
-    width: 90%;
-    padding: 10px;
+@media (max-width: 600px) {
+  .maindish {
+    grid-template-columns: 1fr; /* 1 item per row on small screens */
+    gap: 10px;
   }
 
-  .maindish-card img {
-    max-height: 200px;
+  .main-dish-card {
+    flex: 1 1 100%;
+    margin: 10px;
   }
 }
 
-.maindish-card {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  max-width: 600px;
-  margin: auto;
-  color: black;
-  padding: 20px;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-}
-
-.maindish-card img {
-  width: 100%;
-  height: auto;
-  max-height: 300px;
-  object-fit: cover;
-  border-radius: 5px;
-}
-
+/* Price for Maindish card */
 .price {
   font-weight: bold;
   margin-top: 10px;
 }
 
+/* Content Box for Maindish */
 .content-box {
   background-color: white;
   text-align: center;
   padding: 20px;
 }
 
+/* Specific Card Container */
+.specific-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 90%;
+  max-width: 800px;
+  margin: 50px auto;
+  padding: 20px;
+  background-color: #99c1f5;
+  border-radius: 10px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  box-sizing: border-box;
+}
+
+/* Image Styling */
+.specific-card img {
+  width: 100%;
+  height: 350px; /* Larger height */
+  max-height: 350px;
+  object-fit: cover;
+  border-radius: 10px;
+  margin-bottom: 20px; /* Space between image and text */
+}
+
+/* Heading and Description */
+.specific-card h3 {
+  font-size: 2rem; /* Larger font size for title */
+  color: #333;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+.specific-card p {
+  font-size: 1.2rem;
+  color: #555;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.specific-card .price {
+  font-weight: bold;
+  font-size: 1.4rem;
+  color: #333;
+  margin-top: 10px;
+  text-align: center;
+}
+
+/* Button Styling */
+
+.order-link {
+  display: inline-block;
+  padding: 0.5em 1.6em;
+  font-size: 1em;
+  font-weight: 500;
+  background-color: #535bf2;
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+  text-align: center;
+  transition: all 0.3s ease-in-out;
+}
+
+.order-link:hover {
+  background-color: #434bce;
+}
+
+.order-link:focus {
+  outline: 4px solid #535bf2;
+  outline-offset: 2px;
+}
+
+.specific-card button {
+  padding: 10px 20px;
+  background-color: #535bf2;
+  color: white;
+  font-size: 1rem;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+.phone-number {
+  color: white;
+  display: block;
+  text-decoration: underline;
+  margin-top: 5px;
+  font-size: 2rem;
+}
+
+.button-container {
+  display: flex;
+  gap: 15px; 
+  justify-content: center; 
+}
+
+.specific-card button:hover {
+  background-color: #3f47c2; /* Darker on hover */
+}
+
 /* Menu Grid Styles */
 .menu-grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr); 
-  gap: 10px; 
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
   margin: 10% 12%;
   padding-left: 20px;
   padding-right: 20px;
@@ -223,9 +330,9 @@ nav {
   background-color: #99c1f5;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   width: 100%;
-  max-width: 350px; /* Adjust to limit the width of each item */
+  max-width: 350px;
   height: 450px;
-  margin-bottom: 20px; /* Ensure there's space below each item */
+  margin-bottom: 20px;
 }
 
 .menu-item p {
@@ -263,7 +370,10 @@ nav {
   color: #333;
 }
 
+
 /* Images Under the Header */
+
+
 .house-container {
   display: flex;
   justify-content: center;
@@ -308,7 +418,7 @@ nav {
 hr {
   border: 2px solid #0000005b;
   margin: 10px auto;
-  width: 50%; /* Adjust width to make it shorter */
+  width: 50%; 
 }
 
 /* Responsive Menu Grid */
@@ -321,23 +431,24 @@ hr {
   }
 
   .menu-item {
-    width: 90%; /* Take up most of the screen width */
-    max-width: 100%; /* Allow item to fill the screen width */
-    padding: 20px; /* Reduce padding on mobile */
-    margin-bottom: 20px; /* Add space between items */
+    width: 90%; 
+    max-width: 100%; 
+    padding: 20px; 
+    margin-bottom: 20px; 
   }
 
   .menu-item img {
-    height: 200px; /* Reduce image height */
+    height: 200px; 
   }
 }
 
 .bottom-info {
+  display: flex;
   width: 100vw; 
   max-width: 100%; 
   background-color: red;
   margin: 0; 
-  padding: 80px 20px; 
+  padding: 100px 20px; 
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -346,12 +457,14 @@ hr {
 
 .bottom-info h1 {
   color: white;
-  font-size: 4em; /* Reduce font size for better readability on mobile */
+  font-size: 3em; 
+  margin: 0;
+  padding: 0;
 }
 
 .bottom-info h2, 
 .bottom-info h3 {
-  font-size: 3em; /* Adjust heading size */
+  font-size: 3em; 
 }
 
 /* Map adjustments */
@@ -366,30 +479,30 @@ hr {
 /* Adjustments specifically for small screens */
 @media (max-width: 768px) {
   .bottom-info {
-    padding: 30px; /* Reduce padding on smaller screens */
+    padding: 30px; 
   }
 
   .bottom-info h1 {
-    font-size: 1.8em; /* Reduce size for smaller screens */
+    font-size: 1.8em; 
   }
 
   .bottom-info h2, 
   .bottom-info h3 {
-    font-size: 1em; /* Keep them readable but smaller */
+    font-size: 1em; 
   }
 
   .bottom-info iframe, 
   .bottom-info div { 
-    width: 95%; /* Make full use of mobile screen width */
+    width: 95%; 
     max-width: 100%; 
-    height: 200px; /* Adjust height to fit better */
+    height: 200px; 
   }
 }
 
 /* For very small screens */
 @media (max-width: 480px) {
   .bottom-info {
-    padding: 20px; /* Reduce padding even more */
+    padding: 20px; 
   }
 
   .bottom-info h1 {
@@ -403,6 +516,6 @@ hr {
 
   .bottom-info iframe, 
   .bottom-info div { 
-    height: 200px; /* Make the map smaller on tiny screens */
+    height: 200px; 
   }
 }

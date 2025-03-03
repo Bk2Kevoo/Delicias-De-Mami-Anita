@@ -27,13 +27,19 @@ const MainDishById = () => {
     const { id, image, name, price, description } = maindish;
 
     return (
-        <div className="maindish-card" data-testid="maindish-item">
+        <div className="specific-card-grid">
+        <div className="specific-card" data-testid="maindish-item">
             <img src={image} alt={name} />
             <h3>{name}</h3>
             <p>{description}</p>
             <p className="price">Price: ${price}</p>
-            <button onClick={() => navigate("/maindishes")}>Back to Menu</button>
+            <div className="button-container">
+                <button onClick={() => navigate("/maindishes")}>Back to Menu</button>
+                <a href="tel:+2038647521" className="order-link">Order Now</a>
+            </div>
         </div>
+    </div>
+    
     );
 };
 
