@@ -4,15 +4,43 @@
             "id": "1",
             "name": "Encebollado",
             "image": "/images/encebollado.jpg",
-            "price": 15.00,
+            "price": 13.00,
             "description": "A traditional Ecuadorian fish soup made with albacore tuna, yuca, and onions, typically served with avocado and lime."
         },
         {
             "id": "2",
+            "name": "Encebollado Mixto",
+            "image": "/images/mixto.jpg",
+            "price": 13.00,
+            "description": "Fish stew, with tuna and shrimp, cassava and pickled onions served with rice, banana chips and corn nuts."
+        },
+        {
+            "id": "3",
             "name": "Ceviche De Camaron",
             "image": "/images/ceviche2.jpg",
             "price": 15.00,
             "description": "A refreshing shrimp ceviche marinated in lime juice with tomatoes, onions, and cilantro, served with popcorn and plantain chips."
+        },
+        {
+            "id": "4",
+            "name": "Arroz Con Camarones",
+            "image": "/images/arrozcon.jpg",
+            "price": 15.00,
+            "description": "Arroz con camarones [pronounced a·rros kon ka·ma·ro·nes] translates to “rice with shrimp”. Another name for this dish is arroz amarillo con camarones which translates to “yellow rice with shrimp”."
+        },
+        {
+            "id": "5",
+            "name": "Arroz Marinero",
+            "image": "/images/arrozmar.jpg",
+            "price": 15.00,
+            "description": "This seafood rice recipe, also known as Arroz marinero or Arroz con mariscos, is a delicious Latin American dish made with rice cooked in seafood broth and sautéed with shrimp, clams, squid, bay scallops, onions, garlic, bell pepper, cilantro and spices."
+        },
+        {
+            "id": "6",
+            "name": "Pescado Frito",
+            "image": "/images/pescado.jpg",
+            "price": 14.00,
+            "description": "Fried Fish, comes with White Rice, Fried Plantains (Patacones or Maduro), Salad (lettuce, tomato, onion, sometimes avocado),lemon on the side,  and fries if you desire on the side as well."
         }
     ],
     "sidedishes": [
@@ -22,6 +50,20 @@
             "image": "/images/salchipapa.jpg",
             "description": "A popular street food dish made of French fries topped with sliced hot dogs and served with various condiments like ketchup and mayonnaise.",
             "price": 5.00
+        },
+        {
+            "id": "11",
+            "name": "Nuggets De Pollo Con Papas Fritas (Para Ninos)",
+            "image": "/images/nuggets.jpg",
+            "price": 5.00,
+            "description": "Chicken nuggets with a side of French fries."
+        },
+        {
+            "id": "12",
+            "name": "Papa y Pollo",
+            "image": "/images/papaypollo.jpg",
+            "price": 5.00,
+            "description": "Chicken with French Fries, can come with lettuce, tomato, mayonaise, ketchup, aji (ecuadorian hot sauce)"
         }
     ],
     "drinks": [
@@ -43,8 +85,8 @@
             "id": "22",
             "name": "Gatorade",
             "image": "/images/green.jpg",
-            "description": "A sports drink available in various flavors, perfect for refreshing after physical activity.",
-            "price": 2.00
+            "price": 2.00,
+            "description": "A sports drink available in various flavors, perfect for refreshing after physical activity."
         },
         {
             "id": "23",
@@ -80,6 +122,22 @@
             "image": "/images/modelo.jpg",
             "price": 3.00,
             "description": "A rich and full-bodied Mexican beer that pairs well with a variety of dishes."
+        }
+    ],
+    "desserts": [
+        {
+            "id": "40",
+            "name": "Fresas Con Crema",
+            "image": "/images/gelatina.jpg",
+            "price": 3.00,
+            "description": "Fresh strawberries served with a sweet and creamy sauce."
+        },
+        {
+            "id": "41",
+            "name": "Flan",
+            "image": "/images/flan.jpg",
+            "price": 5.00,
+            "description": "A baked custard dessert with a caramel topping, popular in Latin America and Spain, similar to crème caramel."
         }
     ]
 }
