@@ -1,7 +1,16 @@
+import React, { useState } from "react";
 import { NavLink } from "react-router-dom";
-import logo from "/images/logo.png"
+import logo from "/images/logo.png";
 
-const Header = () => {
+const Header = ({ maindishes, onSearch }) => {
+    const [searchInput, setSearchInput] = useState("");
+
+    const handleInputChange = (e) => {
+        const query = e.target.value;
+        setSearchInput(query);
+        onSearch(query.toLowerCase()); // Trigger the search in the parent component
+    };
+
     return (
         <header>
             <NavLink to="/">
@@ -21,15 +30,17 @@ const Header = () => {
                     Plato Principales (Maindishes)
                 </NavLink>
 
-                {/* Nav Link for add new movie
-                <NavLink
-                    end to="/movies/new"
-                    className={({ isActive }) => isActive ? "active add-link" : "add-link"}>
-                    Add New Movie
-                </NavLink> */}
+                {/* Search Input */}
+                <input 
+                    type="text" 
+                    placeholder="Search..." 
+                    value={searchInput} 
+                    onChange={handleInputChange} 
+                    className="search-input"
+                />
             </nav>
         </header>
     );
-}
+};
 
 export default Header;

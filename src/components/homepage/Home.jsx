@@ -18,7 +18,6 @@ function Home() {
   <div className="content-box">
     <h1 className="centered">Menu</h1>
     <hr></hr>
-    {/* <p className="centered">Experience the flavors of Ecuador with our delicious dishes!</p> */}
 
     <div className="menu-grid">
       <Link to="/maindishes" className="menu-item">

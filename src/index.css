@@ -153,6 +153,30 @@ nav {
   height: auto; /* Allow the card to adjust its height based on content */
   box-sizing: border-box; /* Include padding in width/height calculations */
 }
+.dish-info {
+  display: flex; /* Flexbox to align items horizontally */
+  align-items: center; /* Vertically center the text and stars */
+  gap: 10px; /* Add some space between the name and the stars */
+}
+
+.dish-info h3 {
+  margin: 0; /* Remove default margin to keep the layout tight */
+}
+
+.maindish-image {
+  width: 100%;
+  height: auto;
+}
+
+.details {
+  margin-top: 10px;
+}
+
+/* Optional: Style the stars to make them smaller */
+.ReactStars {
+  display: inline-block;
+  margin-left: 5px; 
+}
 
 .main-dish-card:hover {
   transform: scale(1.05);
@@ -519,3 +543,42 @@ hr {
     height: 200px; 
   }
 }
+
+main {
+  display: flex;
+  flex-direction: column;
+  gap: 30px; /* Add space between the sections */
+  padding: 20px;
+}
+
+.sort-rating-container {
+  margin-top: 5px;
+  padding: 30px;
+  color: black;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start; /* Keep it aligned to the left */
+  margin-right: 20px; /* Add some margin on the right for a little offset */
+}
+
+.sort-rating-container input {
+  margin-right: 10px;
+}
+
+/* Ensure the checkbox and layout are responsive */
+@media (max-width: 768px) {
+  main {
+    padding: 10px;
+  }
+
+  .sort-rating-container {
+    margin-top: 15px;
+    margin-right: 10px; /* Adjusted for small screen */
+  }
+
+  .sort-rating-container input {
+    margin-right: 5px;
+  }
+}
+
