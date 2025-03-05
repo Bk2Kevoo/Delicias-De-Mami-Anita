@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { NavLink } from "react-router-dom";
-import logo from "/images/logo.png";
+import logo from '/images/logo.png';
+
 
 const Header = ({ onSearch }) => {
     // const [searchInput, setSearchInput] = useState("");
@@ -24,7 +25,8 @@ const Header = ({ onSearch }) => {
     return (
         <header>
             <NavLink to="/" onClick={closeMenu}>
-                <img src={logo} alt="Delicias De Mami Anita" className="logo" />
+            <img src="/images/logo.png" alt="Delicias De Mami Anita" className="logo" />
+
             </NavLink>
 
             {/* Hamburger Icon */}
