@@ -1,9 +1,9 @@
-import React, { useEffect, useState } from "react"; // importing hooks
-import { useParams, useNavigate } from "react-router-dom"; // importing routing hooks
+import React, { useEffect, useState } from "react"; 
+import { useParams, useNavigate } from "react-router-dom";
 
 const baseUrl = "http://localhost:6001/maindishes";
 
-const MainDishById = () => {
+function MainDishById() {
     const [maindish, setMainDish] = useState(null);
     const { maindishId } = useParams();
     const navigate = useNavigate();

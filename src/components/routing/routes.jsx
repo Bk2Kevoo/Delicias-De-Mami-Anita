@@ -4,6 +4,10 @@ import App from "../App";
 import Home from "../homepage/Home";
 import MainDishById from "../maindishes/MainDishById";
 import MaindishPage from "../maindishes/MainDishPage";
+import SideDishPage from "../sidedishes/SideDishPage";
+import SideDishById from "../sidedishes/SideDishById";
+import DrinksPage from "../drinks/DrinksPage";
+import DrinksById from "../drinks/DrinksById"
 
 
 const projectRouter =  createBrowserRouter ([
@@ -24,6 +28,22 @@ const projectRouter =  createBrowserRouter ([
                 path: "/maindishes/:maindishId",
                 element: <MainDishById />
             },
+            {
+                path: "/sidedishes",
+                element: <SideDishPage />
+            },
+            {
+                path: "/sidedishes/:sidedishId",
+                element: <SideDishById />
+            },
+            {
+                path: "/drinks",
+                element: <DrinksPage />
+            },
+            {
+                path: "/drinks/:drinkId",
+                element: <DrinksById />
+            }
         ]
     }
 ])

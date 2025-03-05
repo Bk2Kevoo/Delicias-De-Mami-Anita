@@ -1,5 +1,3 @@
-import React, { useState, useEffect } from "react";
-import ReactStars from "react-rating-stars-component";
 import { Link } from "react-router-dom";
 
 function MainDishCard({ maindish }) {
@@ -17,7 +15,7 @@ function MainDishCard({ maindish }) {
                 <h3>{name}</h3>
             <div className="details">
                 <Link to={`/maindishes/${id}`}>
-                    <button title={`View more about ${name}`}>View More</button>
+                    <button className="view-more">View More</button>
                 </Link>
             </div>
         </div>

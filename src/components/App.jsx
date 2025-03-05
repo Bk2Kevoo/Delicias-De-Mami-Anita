@@ -1,11 +1,13 @@
 import React, { useEffect, useState } from "react";
 import Header from "./header/Header";
 import { Outlet } from "react-router-dom"; // use 'react-router-dom' instead of 'react-dom'
+import ScrollToTop from "./ScrollToTop";
 
 function App() {
     const [maindishes, setMaindishes] = useState([]);
     const [sidedishes, setSidedishes] = useState([]);
     const [drinks, setDrinks] = useState([]);
+    const [desserts, setDesserts] = useState([]);
 
     // Main Dishes
     useEffect(() => {
@@ -24,7 +26,7 @@ function App() {
 
     // Side Dishes
     useEffect(() => {
-        const fetchSide = async () => {
+        const fetchSidedishes = async () => {
             try {
                 const response = await fetch("http://localhost:6001/sidedishes");
                 const data = await response.json();
@@ -34,7 +36,7 @@ function App() {
             }
         };
 
-        fetchSide();
+        fetchSidedishes();
     }, []);
 
     // Drinks
@@ -52,10 +54,27 @@ function App() {
         fetchDrinks();
     }, []);
 
+    // Desserts
+    useEffect(() => {
+        const fetchDesserts = async () => {
+            try {
+                const response = await fetch("http://localhost:6001/desserts");
+                const data = await response.json();
+                setDesserts(data);
+            } catch (error) {
+                console.log("Error", error);
+            }
+        };
+
+        fetchDesserts();
+    }, []);
+
+
     return (
         <div>
+            <ScrollToTop />
             <Header /> 
-            <Outlet context={{ maindishes, sidedishes, drinks }} />
+            <Outlet context={{ maindishes, sidedishes, drinks, desserts }} />
         </div>
     );
 }

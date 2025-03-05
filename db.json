@@ -43,6 +43,7 @@
             "description": "Fried Fish, comes with White Rice, Fried Plantains (Patacones or Maduro), Salad (lettuce, tomato, onion, sometimes avocado),lemon on the side,  and fries if you desire on the side as well."
         }
     ],
+
     "sidedishes": [
         {
             "id": "10",
@@ -53,17 +54,17 @@
         },
         {
             "id": "11",
-            "name": "Nuggets De Pollo Con Papas Fritas (Para Ninos)",
+            "name": "Nuggets De Pollo Con Papas Fritas",
             "image": "/images/nuggets.jpg",
-            "price": 5.00,
-            "description": "Chicken nuggets with a side of French fries."
+            "description": "Chicken nuggets with a side of French fries.",
+            "price": 5.00
         },
         {
             "id": "12",
             "name": "Papa y Pollo",
             "image": "/images/papaypollo.jpg",
-            "price": 5.00,
-            "description": "Chicken with French Fries, can come with lettuce, tomato, mayonaise, ketchup, aji (ecuadorian hot sauce)"
+            "description": "Chicken with French Fries, can come with lettuce, tomato, mayonaise, ketchup, aji (ecuadorian hot sauce)",
+            "price": 5.00
         }
     ],
     "drinks": [
@@ -124,6 +125,7 @@
             "description": "A rich and full-bodied Mexican beer that pairs well with a variety of dishes."
         }
     ],
+    
     "desserts": [
         {
             "id": "40",

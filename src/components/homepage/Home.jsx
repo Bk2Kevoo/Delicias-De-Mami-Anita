@@ -16,7 +16,7 @@ function Home() {
   </div>
 
   <div className="content-box">
-    <h1 className="centered">Menu</h1>
+    <h1 className="centered-menu">Menu</h1>
     <hr></hr>
 
     <div className="menu-grid">
@@ -35,6 +35,12 @@ function Home() {
       <Link to="/drinks" className="menu-item">
         <img src="/images/inca.jpg" alt="Bebidas" />
         <h3>Bebidas (Drinks)</h3> 
+        <p>Visitar</p>
+      </Link>
+
+      <Link to="/desserts" className="menu-item">
+        <img src="/images/fresasconcrema.jpg" alt="Desserts" />
+        <h3>Postres (Desserts)</h3> 
         <p>Visitar</p>
       </Link>
     </div>

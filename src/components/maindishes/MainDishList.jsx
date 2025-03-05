@@ -4,7 +4,6 @@ import MapComponent from "../MapComponent";
 
 
 function MainDishList({ maindishes }) {
-    // Handle empty state
     if (maindishes.length === 0) {
         return <p>No main dishes available.</p>;
     }
