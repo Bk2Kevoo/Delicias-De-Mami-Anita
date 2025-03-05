@@ -87,7 +87,7 @@
             "name": "Gatorade",
             "image": "/images/green.jpg",
             "price": 2.00,
-            "description": "A sports drink available in various flavors, perfect for refreshing after physical activity."
+            "description": "A sports drink available in various flavors, perfect for refreshing after physical activity. (Call and ask if we have Red, Blue etc)"
         },
         {
             "id": "23",
@@ -115,7 +115,7 @@
             "name": "Corona",
             "image": "/images/corona.jpg",
             "price": 3.00,
-            "description": "A light Mexican beer that is often served with a lime wedge."
+            "description": "A light beer that is often served with a lime wedge."
         },
         {
             "id": "27",
