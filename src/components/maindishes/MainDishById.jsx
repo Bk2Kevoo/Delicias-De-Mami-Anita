@@ -1,7 +1,8 @@
 import React, { useEffect, useState } from "react"; 
 import { useParams, useNavigate } from "react-router-dom";
 
-const baseUrl = "http://localhost:6001/maindishes";
+const baseUrl = process.env.REACT_APP_API_BASE_URL + "/maindishes";
+
 
 function MainDishById() {
     const [maindish, setMainDish] = useState(null);

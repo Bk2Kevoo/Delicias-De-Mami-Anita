@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import { useNavigate, useParams } from "react-router-dom";
 
 
-const baseUrl = "http://localhost:6001/sidedishes";
+const baseUrl = process.env.REACT_APP_API_BASE_URL + "/sidedishes";
 
 function SideDishById() {   
 

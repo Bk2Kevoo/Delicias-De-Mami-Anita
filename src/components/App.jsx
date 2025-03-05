@@ -13,7 +13,7 @@ function App() {
     useEffect(() => {
         const fetchMaindishes = async () => {
             try {
-                const response = await fetch("http://localhost:6001/maindishes");
+                const response = await fetch("https://delicias-de-mami-anita.onrender.com/maindishes");
                 const data = await response.json();
                 setMaindishes(data);
             } catch (error) {
@@ -28,7 +28,7 @@ function App() {
     useEffect(() => {
         const fetchSidedishes = async () => {
             try {
-                const response = await fetch("http://localhost:6001/sidedishes");
+                const response = await fetch("https://delicias-de-mami-anita.onrender.com/sidedishes");
                 const data = await response.json();
                 setSidedishes(data);
             } catch (error) {
@@ -43,7 +43,7 @@ function App() {
     useEffect(() => {
         const fetchDrinks = async () => {
             try {
-                const response = await fetch("http://localhost:6001/drinks");
+                const response = await fetch("https://delicias-de-mami-anita.onrender.com/drinks");
                 const data = await response.json();
                 setDrinks(data);
             } catch (error) {
@@ -58,7 +58,7 @@ function App() {
     useEffect(() => {
         const fetchDesserts = async () => {
             try {
-                const response = await fetch("http://localhost:6001/desserts");
+                const response = await fetch("https://delicias-de-mami-anita.onrender.com/desserts");
                 const data = await response.json();
                 setDesserts(data);
             } catch (error) {

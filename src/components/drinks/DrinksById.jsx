@@ -3,7 +3,7 @@ import { useNavigate, useParams } from "react-router-dom";
 
 
 
-const baseUrl = "http://localhost:6001/drinks"
+const baseUrl = process.env.REACT_APP_API_BASE_URL + "/drinks";
 
 
 function DrinksById () {
