@@ -2,46 +2,55 @@ import { useEffect, useState } from "react";
 import { useNavigate, useParams } from "react-router-dom";
 
 
-const baseUrl = process.env.REACT_APP_API_BASE_URL + "/sidedishes";
+const baseUrl = process.env.VITE_API_BASE_URL || "https://delicias-de-mami-anita.onrender.com";
 
-function SideDishById() {   
-
-    const [sidedish, setSideDish] = useState(null);
-    const { sidedishId } = useParams();
+function DrinksById() {
+    const [drink, setDrinks] = useState(null);
+    const [error, setError] = useState(null);
+    const { drinkId } = useParams(); 
     const navigate = useNavigate();
 
     useEffect(() => {
-        fetch(`${baseUrl}/${sidedishId}`)
-        .then((response) => {
-            if(!response.ok) {
-                throw new Error('Network response was not ok');
-            }
-            return response.json();
-        })
-        .then((data) => setSideDish(data))
-        .catch((error) => console.error("Fetch error:", error))
-    }, [sidedishId]);
+        if (drinkId) {
+            fetch(`${baseUrl}/drinks/${drinkId}`)
+                .then((response) => {
+                    if (!response.ok) {
+                        throw new Error("Response was not ok");
+                    }
+                    return response.json();
+                })
+                .then((data) => setDrinks(data)) 
+                .catch((error) => {
+                    setError(error.message);  
+                    console.error("Fetch error:", error);
+                });
+        }
+    }, [drinkId]);  
 
-    if(!sidedish) {
-        return <h2>Loading../</h2>
+    if (error) {
+        return <h2>Error: {error}</h2>;
     }
 
-    const { id, image, name, price, description } = sidedish;
+    if (!drink) {
+        return <h2>Loading...</h2>;
+    }
 
-    return(
-        <div className="sidedishid-card-grid">
-            <div className="sidedishid-card" data-testid="sidedish-item">
-                <img src={image} alt={name}/>
+    const { image, name, price, description } = drink;
+
+    return (
+        <div className="specific-card-grid">
+            <div className="specific-card" data-testid="drink-item">
+                <img src={image} alt={name} />
                 <h3>{name}</h3>
                 <p>{description}</p>
-                <p className="price-sidedish">Price: ${price}</p>
+                <p className="price">Price: ${price}</p>
                 <div className="button-container">
-                    <button onClick={() => navigate("/sidedishes")}>Back To Menu </button>
+                    <button onClick={() => navigate("/drinks")}>Back to Menu</button>
                     <a href="tel:+2038647521" className="order-link">Order Now</a>
                 </div>
             </div>
         </div>
-    )
+    );
 }
 
-export default SideDishById;
+export default DrinksById;

@@ -1,81 +1,64 @@
 import React, { useEffect, useState } from "react";
 import Header from "./header/Header";
-import { Outlet } from "react-router-dom"; // use 'react-router-dom' instead of 'react-dom'
+import { Outlet } from "react-router-dom";
 import ScrollToTop from "./ScrollToTop";
+
+// Context API for sharing data across the app
+import { createContext } from 'react';
+
+// Create context for sharing the data
+export const AppContext = createContext();
 
 function App() {
     const [maindishes, setMaindishes] = useState([]);
     const [sidedishes, setSidedishes] = useState([]);
     const [drinks, setDrinks] = useState([]);
     const [desserts, setDesserts] = useState([]);
+    const [error, setError] = useState(null);
+
+    // Function to fetch data
+    const fetchData = async (url, setter) => {
+        try {
+            const response = await fetch(url);
+            if (!response.ok) {
+                throw new Error(`Error fetching data from ${url}`);
+            }
+            const data = await response.json();
+            setter(data);
+        } catch (err) {
+            setError(err.message); 
+            console.error("Error fetching data:", err);
+        }
+    };
 
     // Main Dishes
     useEffect(() => {
-        const fetchMaindishes = async () => {
-            try {
-                const response = await fetch("https://delicias-de-mami-anita.onrender.com/maindishes");
-                const data = await response.json();
-                setMaindishes(data);
-            } catch (error) {
-                console.log("Error", error);
-            }
-        };
-
-        fetchMaindishes();
+        fetchData("https://delicias-de-mami-anita.onrender.com/maindishes", setMaindishes);
     }, []);
 
     // Side Dishes
     useEffect(() => {
-        const fetchSidedishes = async () => {
-            try {
-                const response = await fetch("https://delicias-de-mami-anita.onrender.com/sidedishes");
-                const data = await response.json();
-                setSidedishes(data);
-            } catch (error) {
-                console.log("Error", error);
-            }
-        };
-
-        fetchSidedishes();
+        fetchData("https://delicias-de-mami-anita.onrender.com/sidedishes", setSidedishes);
     }, []);
 
     // Drinks
     useEffect(() => {
-        const fetchDrinks = async () => {
-            try {
-                const response = await fetch("https://delicias-de-mami-anita.onrender.com/drinks");
-                const data = await response.json();
-                setDrinks(data);
-            } catch (error) {
-                console.log("Error", error);
-            }
-        };
-
-        fetchDrinks();
+        fetchData("https://delicias-de-mami-anita.onrender.com/drinks", setDrinks);
     }, []);
 
     // Desserts
     useEffect(() => {
-        const fetchDesserts = async () => {
-            try {
-                const response = await fetch("https://delicias-de-mami-anita.onrender.com/desserts");
-                const data = await response.json();
-                setDesserts(data);
-            } catch (error) {
-                console.log("Error", error);
-            }
-        };
-
-        fetchDesserts();
+        fetchData("https://delicias-de-mami-anita.onrender.com/desserts", setDesserts);
     }, []);
 
-
     return (
-        <div>
-            <ScrollToTop />
-            <Header /> 
-            <Outlet context={{ maindishes, sidedishes, drinks, desserts }} />
-        </div>
+        <AppContext.Provider value={{ maindishes, sidedishes, drinks, desserts, error }}>
+            <div>
+                <ScrollToTop />
+                <Header />
+                <Outlet />
+            </div>
+        </AppContext.Provider>
     );
 }
 
