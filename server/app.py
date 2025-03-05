@@ -142,13 +142,13 @@ data = {
 def get_item_by_id(items, item_id):
     return next((item for item in items if item['id'] == item_id), None)
 
-# Routes
 @app.route('/maindishes', methods=['GET'])
 def get_maindishes():
     try:
         return jsonify(data['maindishes']), 200
     except Exception as e:
         return jsonify({"message": "Error fetching maindishes", "error": str(e)}), 500
+
 
 @app.route('/maindishes/<maindish_id>', methods=['GET'])
 def get_maindish(maindish_id):
@@ -200,4 +200,4 @@ def get_dessert(dessert_id):
     return jsonify({"message": f"Dessert with ID {dessert_id} not found"}), 404
 
 if __name__ == '__main__':
-    app.run(debug=True)
+    app.run(debug=True, host='0.0.0.0', port=5000)
