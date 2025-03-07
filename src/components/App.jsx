@@ -35,10 +35,10 @@ function App() {
 
     useEffect(() => {
         // Update the API URL for each category to use localhost for testing
-        fetchData("http://localhost:5000/maindishes", "maindishes");
-        fetchData("http://localhost:5000/sidedishes", "sidedishes");
-        fetchData("http://localhost:5000/drinks", "drinks");
-        fetchData("http://localhost:5000/desserts", "desserts");
+        fetchData("https://delicias-de-mami-anita.onrender.com", "maindishes");
+        fetchData("https://delicias-de-mami-anita.onrender.com", "sidedishes");
+        fetchData("https://delicias-de-mami-anita.onrender.com", "drinks");
+        // fetchData("https://delicias-de-mami-anita.onrender.com", "desserts");
     }, []); // Empty array ensures this runs only once when the component mounts
 
     const value = useMemo(() => [data, error], [data, error]); // Only recompute when data or error changes

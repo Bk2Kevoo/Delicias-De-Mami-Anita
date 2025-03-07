@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react"; 
 import { useParams, useNavigate } from "react-router-dom";
 
-const baseUrl = "http://localhost:5000"; 
+const baseUrl = "https://delicias-de-mami-anita.onrender.com"; 
 
 
 function MainDishById() {
