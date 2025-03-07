@@ -3,7 +3,7 @@ import Header from "./header/Header";
 import { Outlet } from "react-router-dom";
 import ScrollToTop from "./ScrollToTop";
 
-// Create context for sharing the data
+
 export const AppContext = createContext();
 
 function App() {
@@ -16,7 +16,7 @@ function App() {
     const [error, setError] = useState(null);
 
     const fetchData = async (url, key) => {
-        const apiUrl = process.env.REACT_APP_API_URL || "http://localhost:5000";
+        const apiUrl = "https://delicias-de-mami-anita.onrender.com"; 
         try {
             const response = await fetch(`${apiUrl}${url}`);
             if (!response.ok) {
@@ -33,13 +33,15 @@ function App() {
         }
     };
     
-    
 
     useEffect(() => {
-        fetchData("https://delicias-de-mami-anita-1.onrender.com", "maindishes");
-        fetchData("https://delicias-de-mami-anita-1.onrender.com", "sidedishes");
-        fetchData("https://delicias-de-mami-anita-1.onrender.com", "drinks");
-        // fetchData("https://delicias-de-mami-anita.onrender.com", "desserts");
+        useEffect(() => {
+        fetchData("/maindishes", "maindishes");
+        fetchData("/sidedishes", "sidedishes");
+        fetchData("/drinks", "drinks");
+        fetchData("/desserts", "desserts");
+        }, []);
+        
     }, []); 
 
     const value = useMemo(() => [data, error], [data, error]); // Only recompute when data or error changes
