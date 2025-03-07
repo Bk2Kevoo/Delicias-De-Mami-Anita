@@ -3,8 +3,7 @@ from flask_cors import CORS
 import os
 
 app = Flask(__name__, static_folder='static')
-CORS(app)
-
+CORS(app, resources={r"/*": {"origins": "https://delicias-de-mami-anita-1.onrender.com"}})
 
 data = {
     "maindishes": [

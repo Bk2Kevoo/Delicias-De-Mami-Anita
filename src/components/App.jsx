@@ -18,7 +18,7 @@ function App() {
     // Function to fetch data
     const fetchData = async (url, key) => {
         try {
-            const response = await fetch(url);
+            const response = await fetch(`https://delicias-de-mami-anita.onrender.com${url}`);
             if (!response.ok) {
                 throw new Error(`Error fetching data from ${url}`);
             }
@@ -32,14 +32,14 @@ function App() {
             console.error("Error fetching data:", err);
         }
     };
+    
 
     useEffect(() => {
-        // Update the API URL for each category to use localhost for testing
-        fetchData("https://delicias-de-mami-anita.onrender.com", "maindishes");
-        fetchData("https://delicias-de-mami-anita.onrender.com", "sidedishes");
-        fetchData("https://delicias-de-mami-anita.onrender.com", "drinks");
+        fetchData("https://delicias-de-mami-anita.onrender.com/maindishes", "maindishes");
+        fetchData("https://delicias-de-mami-anita.onrender.com/sidedishes", "sidedishes");
+        fetchData("https://delicias-de-mami-anita.onrender.com/drinks", "drinks");
         // fetchData("https://delicias-de-mami-anita.onrender.com", "desserts");
-    }, []); // Empty array ensures this runs only once when the component mounts
+    }, []); 
 
     const value = useMemo(() => [data, error], [data, error]); // Only recompute when data or error changes
 
