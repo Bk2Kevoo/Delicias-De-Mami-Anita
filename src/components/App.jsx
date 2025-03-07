@@ -35,7 +35,6 @@ function App() {
     
 
     useEffect(() => {
-        useEffect(() => {
         fetchData("/maindishes", "maindishes");
         fetchData("/sidedishes", "sidedishes");
         fetchData("/drinks", "drinks");
