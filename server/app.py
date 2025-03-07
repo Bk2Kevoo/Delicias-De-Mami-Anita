@@ -5,7 +5,7 @@ import os
 app = Flask(__name__)
 
 # Allow only your frontend to make requests
-CORS(app, origins=["https://delicias-de-mami-anita.onrender.com"])
+CORS(app, origins=["https://delicias-mami-anita.onrender.com"])
 
 # Your data as a dictionary
 data = {
