@@ -39,9 +39,8 @@ function App() {
         fetchData("/sidedishes", "sidedishes");
         fetchData("/drinks", "drinks");
         fetchData("/desserts", "desserts");
-        }, []);
-        
-    }, []); 
+    
+    }, []);
 
     const value = useMemo(() => [data, error], [data, error]); // Only recompute when data or error changes
 
