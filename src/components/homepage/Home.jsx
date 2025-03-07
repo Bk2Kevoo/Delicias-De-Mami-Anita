@@ -57,7 +57,7 @@ function Home() {
     </a>
   </h2>
   <h3>Bridgeport, CT 06606</h3>
-  <a href="tel:+2038647521" className="phone-number">203-864-7521</a>
+  <a href="tel:+12038647521" className="phone-number">203-864-7521</a>
   <MapComponent />
 </div>
 
