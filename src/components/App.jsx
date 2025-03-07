@@ -25,7 +25,7 @@ function App() {
             const data = await response.json();
             setData((prevData) => ({
                 ...prevData,
-                [key]: data,
+                [key]: data, // dynamically update the corresponding key
             }));
         } catch (err) {
             setError(err.message);
@@ -35,10 +35,10 @@ function App() {
 
     useEffect(() => {
         // Update the API URL for each category
-        fetchData("https://delicias-de-mami-anita.onrender.com/maindishes", "maindishes");
-        fetchData("https://delicias-de-mami-anita.onrender.com/sidedishes", "sidedishes");
-        fetchData("https://delicias-de-mami-anita.onrender.com/drinks", "drinks");
-        fetchData("https://delicias-de-mami-anita.onrender.com/desserts", "desserts");
+        fetchData("https://delicias-mami-anita.onrender.com/maindishes", "maindishes");
+        fetchData("https://delicias-mami-anita.onrender.com/sidedishes", "sidedishes");
+        fetchData("https://delicias-mami-anita.onrender.com/drinks", "drinks");
+        fetchData("https://delicias-mami-anita.onrender.com/desserts", "desserts");
     }, []); // Empty array ensures this runs only once when the component mounts
 
     const value = useMemo(() => [data, error], [data, error]); // Only recompute when data or error changes
