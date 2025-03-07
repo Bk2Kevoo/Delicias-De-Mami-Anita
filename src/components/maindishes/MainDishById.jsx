@@ -1,7 +1,8 @@
 import React, { useEffect, useState } from "react"; 
 import { useParams, useNavigate } from "react-router-dom";
 
-const baseUrl = process.env.VITE_API_BASE_URL || "https://delicias-de-mami-anita.onrender.com";
+const baseUrl = "http://localhost:5000"; 
+
 
 function MainDishById() {
     const [maindish, setMainDish] = useState(null);
