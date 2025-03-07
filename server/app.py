@@ -5,7 +5,7 @@ import os
 app = Flask(__name__)
 
 # Allow only your frontend to make requests
-CORS(app, origins=["https://delicias-de-mami-anita-1.onrender.com"])
+CORS(app, origins=["https://delicias-de-mami-anita.onrender.com"])
 
 # Your data as a dictionary
 data = {
@@ -13,42 +13,42 @@ data = {
         {
             "id": "1",
             "name": "Encebollado",
-            "image": "https://delicias-de-mami-anita.onrender.com/static/images/encebollado.jpg",  # Full URL for image
+            "image": "/static/images/encebollado.jpg",  # Image path updated to /static
             "price": 13.00,
             "description": "A traditional Ecuadorian fish soup made with albacore tuna, yuca, and onions, typically served with avocado and lime."
         },
         {
             "id": "2",
             "name": "Encebollado Mixto",
-            "image": "https://delicias-de-mami-anita.onrender.com/static/images/mixto.jpg",  # Full URL for image
+            "image": "/static/images/mixto.jpg",  # Image path updated to /static
             "price": 13.00,
             "description": "Fish stew, with tuna and shrimp, cassava and pickled onions served with rice, banana chips and corn nuts."
         },
         {
             "id": "3",
             "name": "Ceviche De Camaron",
-            "image": "https://delicias-de-mami-anita.onrender.com/static/images/ceviche2.jpg",  # Full URL for image
+            "image": "/static/images/ceviche2.jpg",  # Image path updated to /static
             "price": 15.00,
             "description": "A refreshing shrimp ceviche marinated in lime juice with tomatoes, onions, and cilantro, served with popcorn and plantain chips."
         },
         {
             "id": "4",
             "name": "Arroz Con Camarones",
-            "image": "https://delicias-de-mami-anita.onrender.com/static/images/arrozcon.jpg",  # Full URL for image
+            "image": "/static/images/arrozcon.jpg",  # Image path updated to /static
             "price": 15.00,
             "description": "Arroz con camarones [pronounced a·rros kon ka·ma·ro·nes] translates to “rice with shrimp”. Another name for this dish is arroz amarillo con camarones which translates to “yellow rice with shrimp”."
         },
         {
             "id": "5",
             "name": "Arroz Marinero",
-            "image": "https://delicias-de-mami-anita.onrender.com/static/images/arrozmar.jpg",  # Full URL for image
+            "image": "/static/images/arrozmar.jpg",  # Image path updated to /static
             "price": 15.00,
             "description": "This seafood rice recipe, also known as Arroz marinero or Arroz con mariscos, is a delicious Latin American dish made with rice cooked in seafood broth and sautéed with shrimp, clams, squid, bay scallops, onions, garlic, bell pepper, cilantro and spices."
         },
         {
             "id": "6",
             "name": "Pescado Frito",
-            "image": "https://delicias-de-mami-anita.onrender.com/static/images/pescado.jpg",  # Full URL for image
+            "image": "/static/images/pescado.jpg",  # Image path updated to /static
             "price": 14.00,
             "description": "Fried Fish, comes with White Rice, Fried Plantains (Patacones or Maduro), Salad (lettuce, tomato, onion, sometimes avocado), lemon on the side, and fries if you desire on the side as well."
         }
@@ -58,21 +58,21 @@ data = {
         {
             "id": "10",
             "name": "Salchipapa",
-            "image": "https://delicias-de-mami-anita.onrender.com/static/images/salchipapa.jpg",  # Full URL for image
+            "image": "/static/images/salchipapa.jpg",  # Image path updated to /static
             "description": "A popular street food dish made of French fries topped with sliced hot dogs and served with various condiments like ketchup and mayonnaise.",
             "price": 5.00
         },
         {
             "id": "11",
             "name": "Nuggets De Pollo Con Papas Fritas",
-            "image": "https://delicias-de-mami-anita.onrender.com/static/images/nuggets.jpg",  # Full URL for image
+            "image": "/static/images/nuggets.jpg",  # Image path updated to /static
             "description": "Chicken nuggets with a side of French fries.",
             "price": 5.00
         },
         {
             "id": "12",
             "name": "Papa y Pollo",
-            "image": "https://delicias-de-mami-anita.onrender.com/static/images/papaypollo.jpg",  # Full URL for image
+            "image": "/static/images/papaypollo.jpg",  # Image path updated to /static
             "description": "Chicken with French Fries, can come with lettuce, tomato, mayonnaise, ketchup, aji (Ecuadorian hot sauce)",
             "price": 5.00
         }
@@ -82,42 +82,42 @@ data = {
         {
             "id": "20",
             "name": "Inca Kola",
-            "image": "https://delicias-de-mami-anita.onrender.com/static/images/inca.jpg",  # Full URL for image
+            "image": "/static/images/inca.jpg",  # Image path updated to /static
             "price": 1.00,
             "description": "A sweet, bright yellow soda that is a popular choice in Ecuador, often enjoyed with meals."
         },
         {
             "id": "21",
             "name": "Coke",
-            "image": "https://delicias-de-mami-anita.onrender.com/static/images/coke.jpg",  # Full URL for image
+            "image": "/static/images/coke.jpg",  # Image path updated to /static
             "price": 1.00,
             "description": "Classic Coca-Cola, a favorite carbonated beverage worldwide."
         },
         {
             "id": "22",
             "name": "Gatorade",
-            "image": "https://delicias-de-mami-anita.onrender.com/static/images/green.jpg",  # Full URL for image
+            "image": "/static/images/green.jpg",  # Image path updated to /static
             "price": 2.00,
             "description": "A sports drink available in various flavors, perfect for refreshing after physical activity."
         },
         {
             "id": "23",
             "name": "Pepsi",
-            "image": "https://delicias-de-mami-anita.onrender.com/static/images/pepsi.jpg",  # Full URL for image
+            "image": "/static/images/pepsi.jpg",  # Image path updated to /static
             "price": 1.00,
             "description": "Another popular carbonated soft drink, known for its bold flavor."
         },
         {
             "id": "24",
             "name": "Guitig (Sparkling Water)",
-            "image": "https://delicias-de-mami-anita.onrender.com/static/images/guitig.jpg",  # Full URL for image
+            "image": "/static/images/guitig.jpg",  # Image path updated to /static
             "price": 2.00,
             "description": "A refreshing sparkling water that is perfect for pairing with meals."
         },
         {
             "id": "25",
             "name": "Heineken",
-            "image": "https://delicias-de-mami-anita.onrender.com/static/images/Heineken.jpg",  # Full URL for image
+            "image": "/static/images/Heineken.jpg",  # Image path updated to /static
             "price": 3.00,
             "description": "A well-known international lager, enjoyed for its crisp and refreshing taste."
         }
@@ -127,14 +127,14 @@ data = {
         {
             "id": "40",
             "name": "Fresas Con Crema",
-            "image": "https://delicias-de-mami-anita.onrender.com/static/images/gelatina.jpg",  # Full URL for image
+            "image": "/static/images/gelatina.jpg",  # Image path updated to /static
             "price": 3.00,
             "description": "Fresh strawberries served with a sweet and creamy sauce."
         },
         {
             "id": "41",
             "name": "Flan",
-            "image": "https://delicias-de-mami-anita.onrender.com/static/images/flan.jpg",  # Full URL for image
+            "image": "/static/images/flan.jpg",  # Image path updated to /static
             "price": 5.00,
             "description": "A baked custard dessert with a caramel topping, popular in Latin America and Spain."
         }
