@@ -15,17 +15,17 @@ function App() {
     });
     const [error, setError] = useState(null);
 
-    // Function to fetch data
     const fetchData = async (url, key) => {
+        const apiUrl = process.env.REACT_APP_API_URL || "http://localhost:5000";
         try {
-            const response = await fetch(`https://delicias-de-mami-anita.onrender.com${url}`);
+            const response = await fetch(`${apiUrl}${url}`);
             if (!response.ok) {
                 throw new Error(`Error fetching data from ${url}`);
             }
             const data = await response.json();
             setData((prevData) => ({
                 ...prevData,
-                [key]: data, // dynamically update the corresponding key
+                [key]: data,
             }));
         } catch (err) {
             setError(err.message);
@@ -33,11 +33,12 @@ function App() {
         }
     };
     
+    
 
     useEffect(() => {
-        fetchData("https://delicias-de-mami-anita.onrender.com/maindishes", "maindishes");
-        fetchData("https://delicias-de-mami-anita.onrender.com/sidedishes", "sidedishes");
-        fetchData("https://delicias-de-mami-anita.onrender.com/drinks", "drinks");
+        fetchData("https://delicias-de-mami-anita-1.onrender.com", "maindishes");
+        fetchData("https://delicias-de-mami-anita-1.onrender.com", "sidedishes");
+        fetchData("https://delicias-de-mami-anita-1.onrender.com", "drinks");
         // fetchData("https://delicias-de-mami-anita.onrender.com", "desserts");
     }, []); 
 
