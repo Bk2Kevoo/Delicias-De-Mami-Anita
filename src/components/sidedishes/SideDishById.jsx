@@ -13,7 +13,7 @@ function SideDishById() {
 
     useEffect(() => {
         if (sidedishId) {
-            fetch(`${baseUrl}/sidedish/${sidedishId}`)
+            fetch(`${baseUrl}/sidedishes/${sidedishId}`)
                 .then((response) => {
                     if (!response.ok) {
                         throw new Error("Response was not ok");
