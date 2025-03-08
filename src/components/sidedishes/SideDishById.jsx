@@ -37,6 +37,7 @@ function SideDishById() {
         return <h2>Loading...</h2>;
     }
 
+    // Destructuring properties based on expected data structure
     const { image, name, price, description } = sidedish;
 
     return (
