@@ -42,7 +42,7 @@ function App() {
     
     }, []);
 
-    const value = useMemo(() => [data, error], [data, error]); // Only recompute when data or error changes
+    const value = useMemo(() => [data, error], [data, error]);
 
     return (
         <AppContext.Provider value={value}>

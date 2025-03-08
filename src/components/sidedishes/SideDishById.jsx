@@ -5,34 +5,34 @@ import { useNavigate, useParams } from "react-router-dom";
 const baseUrl = "https://delicias-de-mami-anita.onrender.com"; 
 
 
-function DrinksById() {
-    const [drink, setDrinks] = useState(null);
+function SideDishById() {
+    const [sidedish, setSideDish] = useState(null);
     const [error, setError] = useState(null);
-    const { drinkId } = useParams(); 
+    const { sidedishId } = useParams(); 
     const navigate = useNavigate();
 
     useEffect(() => {
-        if (drinkId) {
-            fetch(`${baseUrl}/drinks/${drinkId}`)
+        if (sidedishId) {
+            fetch(`${baseUrl}/sidedish/${sidedishId}`)
                 .then((response) => {
                     if (!response.ok) {
                         throw new Error("Response was not ok");
                     }
                     return response.json();
                 })
-                .then((data) => setDrinks(data)) 
+                .then((data) => setSideDish(data)) 
                 .catch((error) => {
                     setError(error.message);  
                     console.error("Fetch error:", error);
                 });
         }
-    }, [drinkId]);  
+    }, [sidedishId]);  
 
     if (error) {
         return <h2>Error: {error}</h2>;
     }
 
-    if (!drink) {
+    if (!sidedish) {
         return <h2>Loading...</h2>;
     }
 
@@ -54,4 +54,4 @@ function DrinksById() {
     );
 }
 
-export default DrinksById;
+export default SideDishById;
