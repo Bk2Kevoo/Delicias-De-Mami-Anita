@@ -36,7 +36,7 @@ function SideDishById() {
         return <h2>Loading...</h2>;
     }
 
-    const { image, name, price, description } = drink;
+    const { image, name, price, description } = sidedish;
 
     return (
         <div className="specific-card-grid">
