@@ -1,5 +1,5 @@
 import { useContext } from "react";
-import { AppContext } from "../App"; // import the context
+import { AppContext } from "../App";
 import SideDishList from "./SideDishList";
 import Header from "../header/Header";
 import { useState } from "react";

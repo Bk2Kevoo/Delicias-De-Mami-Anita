@@ -37,7 +37,7 @@ function DrinksById() {
                 <p className="price">Price: ${price}</p>
                 <div className="button-container">
                     <button onClick={() => navigate("/drinks")}>Back to Menu</button>
-                    <a href="tel:+2038647521" className="order-link">Order Now</a>
+                    <a href="tel:+12038647521" className="order-link">Order Now</a>
                 </div>
             </div>
         </div>

@@ -8,8 +8,8 @@ const containerStyle = {
 };
 
 const center = {
-  lat: 41.2277, // Your latitude
-  lng: -73.2171, // Your longitude
+  lat: 41.2277, 
+  lng: -73.2171, 
 };
 
 function MapComponent() {

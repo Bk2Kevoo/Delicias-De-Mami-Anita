@@ -19,7 +19,7 @@ function SideDishById() {
                     return response.json();
                 })
                 .then((data) => {
-                    console.log("Fetched data:", data);  // Log the data for inspection
+                    console.log("Fetched data:", data); 
                     setSideDish(data);  
                 })
                 .catch((error) => {
@@ -37,7 +37,6 @@ function SideDishById() {
         return <h2>Loading...</h2>;
     }
 
-    // Destructuring properties based on expected data structure
     const { image, name, price, description } = sidedish;
 
     return (
@@ -49,7 +48,7 @@ function SideDishById() {
                 <p className="price">Price: ${price}</p>
                 <div className="button-container">
                     <button onClick={() => navigate("/sidedishes")}>Back to Menu</button>
-                    <a href="tel:+2038647521" className="order-link">Order Now</a>
+                    <a href="tel:+12038647521" className="order-link">Order Now</a>
                 </div>
             </div>
         </div>
