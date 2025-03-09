@@ -3,14 +3,11 @@ import react from '@vitejs/plugin-react';
 
 export default defineConfig({
   plugins: [react()],
+  server: {
+    historyApiFallback: true,
+  },
   build: {
     outDir: 'dist',
-    assetsDir: 'assets',
-    rollupOptions: {
-      input: '/public/index.html',  
-    },
-  },
-  server: {
-    historyApiFallback: true, 
+    assetsDir: 'assets', // Optional: define the folder for assets (images, CSS, etc.)
   },
 });
