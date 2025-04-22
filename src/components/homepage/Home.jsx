@@ -1,6 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import MapComponent from "../MapComponent";
+import myVideo from "/images/video.mp4"
 
 function Home() {
     return (
@@ -15,6 +16,16 @@ function Home() {
     <div className="overlay">Prueba el sabor de Ecuador </div>
   </div>
 
+  {/* This is going to be the video for the Menu  */}
+  <div className="Menu-video">
+    <video controls muted width="400" height="850">
+        <source src={myVideo} type="video/mp4" />
+        Your browser does not support the video tag.
+    </video>
+  </div>
+
+
+  {/* All down here is from the Menu and Below  */}
   <div className="content-box">
     <h1 className="centered-menu">Menu</h1>
     <hr></hr>

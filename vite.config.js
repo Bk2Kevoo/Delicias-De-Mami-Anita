@@ -8,6 +8,6 @@ export default defineConfig({
   },
   build: {
     outDir: 'dist',
-    assetsDir: 'assets', // Optional: define the folder for assets (images, CSS, etc.)
+    assetsDir: 'assets',
   },
 });

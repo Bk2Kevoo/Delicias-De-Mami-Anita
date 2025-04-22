@@ -9,16 +9,16 @@ data = {
     "maindishes": [
         {
             "id": "1",
-            "name": "Encebollado",
+            "name": "Encebollado Mixto",
             "image": "/images/encebollado.jpg",  
-            "price": 13.00,
+            "price": 18.00,
             "description": "A traditional Ecuadorian fish soup made with albacore tuna, yuca, and onions, typically served with avocado and lime."
         },
         {
             "id": "2",
-            "name": "Encebollado Mixto",
+            "name": "Encebollado Mixto + Arroz",
             "image": "/images/mixto.jpg",  
-            "price": 13.00,
+            "price": 20.00,
             "description": "Fish stew, with tuna and shrimp, cassava and pickled onions served with rice, banana chips and corn nuts."
         },
         {
@@ -39,14 +39,14 @@ data = {
             "id": "5",
             "name": "Arroz Marinero",
             "image": "/images/arrozmar.jpg",  
-            "price": 15.00,
+            "price": 22.00,
             "description": "This seafood rice recipe, also known as Arroz marinero or Arroz con mariscos, is a delicious Latin American dish made with rice cooked in seafood broth and sautéed with shrimp, clams, squid, bay scallops, onions, garlic, bell pepper, cilantro and spices."
         },
         {
             "id": "6",
             "name": "Pescado Frito",
             "image": "/images/pescado.jpg",  
-            "price": 14.00,
+            "price": 20.00,
             "description": "Fried Fish, comes with White Rice, Fried Plantains (Patacones or Maduro), Salad (lettuce, tomato, onion, sometimes avocado), lemon on the side, and fries if you desire on the side as well."
         }
     ],
@@ -64,7 +64,7 @@ data = {
             "name": "Nuggets De Pollo Con Papas Fritas",
             "image": "/images/nuggets.jpg",  
             "description": "Chicken nuggets with a side of French fries.",
-            "price": 5.00
+            "price": 10.00
         },
         {
             "id": "12",
@@ -142,7 +142,6 @@ data = {
 def get_item_by_id(items, item_id):
     return next((item for item in items if item['id'] == item_id), None)
 
-# Routes for maindishes, sidedishes, drinks, and desserts
 @app.route('/maindishes', methods=['GET'])
 def get_maindishes():
     try:

@@ -160,8 +160,18 @@ nav {
   }
 }
 
-/* MENU H1 */
 
+/* Menu Video */
+.Menu-video {
+  display: flex;
+  justify-content: center; 
+  align-items: center;   
+  height: 100vh;         
+}
+
+
+
+/* MENU H1 */
 .centered-menu {
   color: black;
   font-size: 3em;
@@ -542,7 +552,6 @@ hr {
   background-color: red;
   margin: 0; 
   padding: 100px 20px; 
-  display: flex;
   flex-direction: column;
   align-items: center;
   text-align: center;
