@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import { useParams, useNavigate } from "react-router-dom";
 
 const baseUrl = "https://delicias-de-mami-anita.onrender.com"; 
+// const baseUrl = "http://localhost:3000"; 
 
 function SideDishById() {
     const [sidedish, setSideDish] = useState(null);

@@ -3,6 +3,7 @@ import { useNavigate, useParams } from "react-router-dom";
 
 
 const baseUrl = "https://delicias-de-mami-anita.onrender.com"; 
+// const baseUrl = "http://localhost:3000"; 
 
 
 function DrinksById() {

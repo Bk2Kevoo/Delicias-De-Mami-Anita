@@ -17,6 +17,7 @@ function App() {
 
     const fetchData = async (url, key) => {
         const apiUrl = "https://delicias-de-mami-anita.onrender.com"; 
+        // const apiUrl = "http://localhost:3000"; 
         try {
             const response = await fetch(`${apiUrl}${url}`);
             if (!response.ok) {
